@@ -32,19 +32,6 @@ Run `/reload` in the console or call `jeikcode_config(action="reload")` to activ
 
 ---
 
-## 🏗️ Architectural Philosophy: Pure Skills vs Source Code
-
-This repository follows the **Decoupled Skills Hub Pattern** (adopted by Vercel `agent-skills`, Homebrew, and VSCode Marketplace):
-
-1. **Pure Skill Packages (In this Hub)**:
-   - Contains only the agent prompts (`SKILL.md`), machine-readable contracts (`metadata.json`), and progressive documentation (`references/`).
-   - Keeps token and repository download footprint negligible (<50 KB per skill).
-2. **Core Source Code & Binaries (In Dedicated Repositories)**:
-   - Complex engines (e.g., Python CDP crawlers, Rust CLI binaries) reside in their own specialized repos with independent CI/CD matrices.
-   - Skills include self-healing bootstrap commands to guide the agent or user in automatically installing binaries when absent.
-
----
-
 ## 🛠️ Contributing a New Skill
 
 We welcome high-quality skills from the community!
