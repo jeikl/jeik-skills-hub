@@ -1,0 +1,47 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Skill Structure & Frontmatter
+        run: |
+          python3 -c "
+          import os, sys
+
+          skills_dir = 'skills'
+          if not os.path.exists(skills_dir):
+              print('No skills directory found.')
+              sys.exit(0)
+
+          errors = []
+          for item in os.listdir(skills_dir):
+              skill_path = os.path.join(skills_dir, item)
+              if not os.path.isdir(skill_path):
+                  continue
+              skill_md = os.path.join(skill_path, 'SKILL.md')
+              if not os.path.exists(skill_md):
+                  errors.append(f'Missing SKILL.md in {skill_path}')
+                  continue
+              with open(skill_md, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              if not content.startswith('---'):
+                  errors.append(f'{skill_md} must begin with YAML frontmatter delimiter (---)')
+              elif 'name:' not in content or 'description:' not in content:
+                  errors.append(f'{skill_md} YAML frontmatter must include name and description')
+
+          if errors:
+              print('Validation failed with errors:')
+              for err in errors:
+                  print(' -', err)
+              sys.exit(1)
+          else:
+              print('All skills passed validation successfully!')
+          "

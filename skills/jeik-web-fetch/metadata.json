@@ -1,0 +1,22 @@
+{
+  "$schema": "https://skills.sh/schema/v1/skill.json",
+  "name": "jeik-web-fetch",
+  "version": "1.0.0",
+  "description": "High-performance web extraction tool. Scrapes any URL (SPA, dynamic JS, anti-bot, intranet, or internet) and outputs clean structured Markdown with 3 categorized modes: --fast (default), --common, and --complex.",
+  "author": "JeikCode Team",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/jeikl/Jeik-Web-Fetch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeikl/Jeik-Web-Fetch.git"
+  },
+  "keywords": [
+    "web-scraping",
+    "markdown-converter",
+    "anti-bot",
+    "spa-crawler",
+    "developer-portal",
+    "jeikcode",
+    "agent-skill"
+  ]
+}
