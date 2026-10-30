@@ -6,22 +6,17 @@ All skills in this hub adhere to the **Open Agent Skills Specification** and **J
 
 ---
 
-## 📦 Available Skills
-
-| Skill | Category | Description | Source Repo | Install Command |
-| :--- | :--- | :--- | :--- | :--- |
-| **[`jeik-web-fetch`](./skills/jeik-web-fetch)** | Web Extraction & Scraping | Scrapes any URL (SPA, dynamic JS, anti-bot, intranet, or internet) and outputs clean structured Markdown with 3 categorized modes (`--fast`, `--common`, `--complex`). | [Jeik-Web-Fetch](https://github.com/jeikl/Jeik-Web-Fetch) | `npx skills add jeikl/jeik-skills-hub@jeik-web-fetch` |
-
----
-
 ## ⚡ Quick Start & Installation
 
 ### 1. Via Skills CLI (Universal Agent Ecosystem)
-Install individual skills or the whole hub globally:
+Browse and install skills interactively or globally:
 
 ```bash
+# Browse all available skills in this hub (without installing)
+npx skills add jeikl/jeik-skills-hub -l
+
 # Install a specific skill
-npx skills add jeikl/jeik-skills-hub@jeik-web-fetch -g -y
+npx skills add jeikl/jeik-skills-hub@<skill-name> -g -y
 
 # Install all skills in this hub
 npx skills add jeikl/jeik-skills-hub -g -y
