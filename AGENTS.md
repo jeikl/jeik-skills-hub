@@ -17,7 +17,7 @@ Welcome to **jeik-skills-hub**! This repository serves as the official open skil
 3. **Commit & Co-Authorship**:
    - Adhere to Conventional Commits (e.g. `feat(...)`, `docs(...)`, `fix(...)`, `refactor(...)`).
    - Leave exactly one blank line between commit body and the trailer.
-   - Strictly append the official JeikCode-Agent trailer to every commit:
+   - Strictly append the official JeikCode trailer to every commit:
      ```text
-     Co-Authored-By: JeikCode-Agent <350112428+JeikCode-Agent@users.noreply.github.com>
+     Co-Authored-By: JeikCode <code@jeikcode.top>
      ```
